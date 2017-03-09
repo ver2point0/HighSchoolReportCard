@@ -1,4 +1,4 @@
-package com.ver2point0.android.highscoolreportcard;
+package com.ver2point0.android.highschoolreportcard;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ver2point0.android.highscoolreportcard", appContext.getPackageName());
+        assertEquals("com.ver2point0.android.highschoolreportcard", appContext.getPackageName());
     }
 }

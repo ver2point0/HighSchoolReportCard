@@ -1,4 +1,4 @@
-package com.ver2point0.android.highscoolreportcard;
+package com.ver2point0.android.highschoolreportcard;
 
 import org.junit.Test;
 
