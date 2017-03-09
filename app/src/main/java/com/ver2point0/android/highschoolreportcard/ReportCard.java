@@ -2,7 +2,7 @@ package com.ver2point0.android.highschoolreportcard;
 
 public class ReportCard {
 
-    private String schoolName;
+    private static final String SCHOOL_NAME = "Acme";
     private String studentFirstName;
     private String studentLastName;
     private int gradeLevel;
@@ -12,7 +12,6 @@ public class ReportCard {
 
     // Default constructor
     public ReportCard() {
-        schoolName = "Acme High School";
         studentFirstName = "Jane";
         studentLastName = "Doe";
         gradeLevel = 11;
@@ -23,8 +22,7 @@ public class ReportCard {
     }
 
     // Custom constructor
-    public ReportCard(String sName, String first, String last, int level, String c1, String c2, String c3, String c4, int c1g, int c2g, int c3g, int c4g) {
-        schoolName = sName;
+    public ReportCard(String first, String last, int level, String c1, String c2, String c3, String c4, int c1g, int c2g, int c3g, int c4g) {
         studentFirstName = first;
         studentLastName = last;
         gradeLevel = level;
@@ -37,7 +35,7 @@ public class ReportCard {
     @Override
     public String toString() {
 
-        return "School Name: " + getSchoolName() + "\n" +
+        return "School Name: " + SCHOOL_NAME + "\n" +
                 "Student Name: " + getStudentFirstName() + " " + getStudentLastName() + "\n" +
                 "Grade Level: " + getGradeLevel() + "\n" +
                 "Course One: " + courseNames[0] + " grade: " + courseGrades[0] + " letter grade: " + getCourseLetterGrade(courseGrades[0]) + "\n" +
@@ -46,8 +44,16 @@ public class ReportCard {
                 "Course One: " + courseNames[3] + " grade: " + courseGrades[3] + " letter grade: " + getCourseLetterGrade(courseGrades[3]);
     }
 
-    private String getSchoolName() {
-        return schoolName;
+    public void setStudentFirstName(String first) {
+        studentFirstName = first;
+    }
+
+    public void setStudentLastName(String last) {
+        studentLastName = last;
+    }
+
+    public void setGradeLevel(int grade) {
+        gradeLevel = grade;
     }
 
     private String getStudentFirstName() {
